@@ -16,3 +16,19 @@ Octubre: 21500,
 Noviembre: 91000,
 Diciembre: 21000
 }
+
+#PRIMERO CREO EN UN ARREGLO LOS DATOS INGRESADOS DESDE EL ARVG
+numbers = ARGV
+numbers.map! do |number|
+    number.to_i
+end
+
+#luego aplico el invert y los comparo
+numbers.each do |number|
+    cant = ventas.invert[number]
+        if cant
+        puts cant
+    else
+        puts "No encontrado"
+    end
+end
