@@ -16,3 +16,8 @@ Octubre: 21500,
 Noviembre: 91000,
 Diciembre: 21000
 }
+ventas.each do |id, venta|
+    if venta > 45000
+        puts "#{id}"
+    end
+end
