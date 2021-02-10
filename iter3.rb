@@ -17,3 +17,13 @@ Octubre: 21500,
 Noviembre: 91000,
 Diciembre: 21000
 }
+
+
+def filter(ventas)
+    ventas_1 = ARGV[0].to_i
+    ventas.select do |key, value|
+        value > ventas_1
+    end
+end
+
+puts filter(45000)

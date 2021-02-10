@@ -17,3 +17,35 @@ Octubre: 21500,
 Noviembre: 91000,
 Diciembre: 21000
 }
+
+ 
+trimestres = ['Q1', 'Q2', 'Q3', 'Q4']
+
+sales_quarters_value = []
+ventas.each_slice(3) do |trimestres|
+    sum = 0
+    trimestres.each do |month_sale|
+        sum += month_sale[1]
+    end
+    sales_quarters_value << sum
+end
+
+print  trimestres.zip(sales_quarters_value).to_h 
+
+
+
+#OTRA FORMA
+=begin 
+trimestres = ['Q1', 'Q2', 'Q3', 'Q4']
+hash = {}
+
+trimestres.count.times do |i|
+    element = ventas[i]
+    trimestre = trimestres[i]
+    hash[element] = trimestre
+    puts Trimestre
+end
+print hash
+=end
+
+
